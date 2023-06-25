@@ -1,0 +1,24 @@
+﻿<section id="cards" class="row">
+    <div class="column" w3-repeat="products">
+        <div class="card">
+            <div class="img" style="background:url('{{image}}');"></div>
+            <div class="content">
+                <!--<div></div>-->
+                <div>
+                    <div class="title">{{name}}</div>
+                    <div class="desc">{{desc}}</div>
+                    <div class="serve">Serve:{{serve}}</div>
+                </div>
+                
+                <div class="price">{{price}}{{unit}}
+                    <div class="order"><button onclick="AddToCart(this)" data-price="{{price}}" data-name="{{name}}">Order</button></div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    GetProducts();
+</script>

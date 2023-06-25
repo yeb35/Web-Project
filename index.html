@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Yemek</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/flickity.pkgd.min.js"></script>
+    <script src="assets/js/w3.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/jquery.scrollend.js"></script>
+    <script src="assets/js/site.js"></script>
+    <link href="assets/fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/row.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/table.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/site.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flickity.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div id="cart"><i class="fa-solid fa-cart-shopping"></i><span id="pricetotal">0.00$</span></div>
+        <div class="navbar" id="myNavbar">
+            <i class="fa-solid fa-bars" id="mobileMenuBtn"></i>
+            <a href="#home" class="logo">Fast Burger</a>
+               
+        </div>
+    </nav>
+    <section id="page">
+        <div id="pages">
+            <div id="homehtml" class="page">
+                <section id="banner">
+                    <div id="bannerText">
+                        <h2>Are You Hungry?</h2>
+                        <h3>Choose one of our delicious burgers and order quickly.</h3>
+                        <a class="button" onclick="smoothScroll('#orderhtml')">Order Now</a>
+                    </div>
+                </section>
+                <section id="campaigns" style="text-align:center;">
+                    <h3>Campaigns</h3>
+                    <div class="main-carousel" style="margin:0 auto">
+                        <div class="carousel-cell">
+                            <img src="assets/campaigns/banner1.png" >
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="assets/campaigns/banner2.png" >
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="assets/campaigns/banner3.png" >
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="assets/campaigns/banner4.png" >
+                        </div>
+                    </div>
+                    <script></script>
+                </section>
+
+                <script>
+                    $(function () {
+                        CreateCarousel();
+                    })
+                </script>
+            </div>
+            <div id="abouthtml" class="page">
+                <img src="assets/photos/chef.png" style="float:left; margin-right:20px;" />
+                <h3>Who We Are?</h3>
+                <p>Welcome to diietrich. We would like to give you an overview of Restaurant. Our goal is to give you an honest look at Restaurantand provide you with the information you need to make a decision about whether this app is right for you.</p>
+                <p>diietrich was founded in 2019 by Dale D. Rubio and has become the leading review website for Restaurant. Provide complete, accurate, and up-to-date information about this product.</p>
+                <p>We hope you enjoy RESTAURANT as much as we promote it. If you have any questions or comments, please do not hesitate to contact us.</p>
+
+                <p>Sincerely,<br />Carlos B. Hill</p>
+            </div>
+
+            <div id="orderhtml" class="page">
+                <section id="cards" class="row">
+                    <div class="column" w3-repeat="products">
+                        <div class="card">
+                            <div class="img" style="background:url('{{image}}');"></div>
+                            <div class="content">
+                                <!--<div></div>-->
+                                <div>
+                                    <div class="title">{{name}}</div>
+                                    <div class="desc">{{desc}}</div>
+                                    <div class="serve">Serve:{{serve}}</div>
+                                </div>
+
+                                <div class="price">
+                                    {{price}}{{unit}}
+                                    <div class="order" data-id="{{id}}" data-price="{{price}}">
+                                        <a class="minus">-</a><input type="text" class="quantity" value="0" readonly /><a class="plus">+</a>
+                                        <!--<button onclick="AddToCart(this)" data-price="{{price}}" data-name="{{name}}">Order</button>-->
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <script>
+                    GetProducts();
+                </script>
+            </div>
+            <div id="supporthtml" class="page">
+                <h3>Customer Service</h3>
+                <p>You can contact customer service with questions, comments or testimonials</p>
+                <p>Hours of Operation: TR</p>
+                <p>Daily from 8 a.m. to 9 p.m. TSİ</p>
+                <p>+90 0232 111 22 33</p>
+            </div>
+
+            <div id="contacthtml" class="page">
+                <h3>Contact Us</h3>
+                <p>You can contact customer service with questions, comments or testimonials</p>
+                <p>Contact us by email: info@food.com</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <footer class="footer">
+        <div id="sitemap"><i class="fa-solid fa-sitemap"></i></div>
+        <div id="copy">Copyright 2022 - developed by  Yunus Emre Bolgönül</div>
+        <!--<div class="sign">
+
+    </div>-->
+    </footer>
+        
+</body>
+
+</html>

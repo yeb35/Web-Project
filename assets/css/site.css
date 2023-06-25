@@ -1,0 +1,175 @@
+
+body {
+    padding-top: 40px;
+    /*text-align: center;*/
+    font-family: Arial;
+    margin: 0;
+    /*overflow: hidden;*/
+    overscroll-behavior-y: contain;
+    overflow-x:hidden;
+}
+
+.main-carousel {
+    width: 350px;
+}
+
+section {
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 12px;
+    background-color: #333;
+    width: 100%;
+    color: #959595;
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+}
+
+    footer #copy {
+        float: right;
+        margin-right: 20px;
+    }
+
+    footer #sitemap {
+        float:left;
+    }
+
+        footer #sitemap a {
+            text-decoration: none;
+            color: #ccc;
+            margin-left: 20px;
+        }
+
+@media screen and (max-width: 720px) {
+
+    footer {
+        text-align:center;
+    }
+
+    footer #copy {
+        float: none;
+        margin-right: 0px;
+    }
+
+    footer #sitemap {
+        float: none;
+        margin-bottom:10px;
+    }
+
+        footer #sitemap i{
+            display:none;
+        }
+
+        footer #sitemap a {
+            margin:0 5px
+        }
+}
+
+#page {
+    padding: 20px;
+}
+
+    #page #pages {
+        margin-top: 40px;
+    }
+
+        #page #pages .page {
+            min-height: calc(100vh - 100px);
+            padding-top: 60px;
+            opacity: 0;
+            /*transform: rotateY(40deg);*/
+        }
+
+        #page #pages .page.one {
+            opacity:1;
+        }
+            #cart {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    color: #fff;
+    z-index: 3;
+}
+
+#pricetotal {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #ff8300;
+}
+
+#banner {
+    width: 100%;
+    height: 300px;
+    background: url(../photos/Burger-banner.png);
+    background-size: cover;
+}
+
+    #banner #bannerText {
+        color: #fff;
+        padding: 20px;
+    }
+
+    #banner button, #banner .button {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        background: #ff8300;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+.carousel-cell img{
+    height:300px;
+}
+@media screen and (max-width: 1366px) {
+    #banner {
+        width: 100%;
+        height: 200px;
+    }
+
+    .main-carousel {
+        width: 300px;
+    }
+
+    .carousel-cell img {
+        height: 250px;
+    }
+}
+
+
+
+
+
+@keyframes one {
+    0% {
+        /*transform: rotateX(80deg) rotateY(40deg) rotateZ(40deg);*/
+        opacity: 0;
+    }
+
+    100% {
+        /*transform: rotateX(0) rotateY(0) rotateZ(0);*/
+        opacity: 1;
+    }
+}
+
+
+.one {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+    animation: one .5s;
+    animation-direction: alternate;
+}
+
+@media screen and (max-width: 720px) {
+    .one {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+        animation: none;
+        animation-direction: alternate;
+    }
+}
+
